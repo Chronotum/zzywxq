@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.16.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <title>zzywxq</title>
+</head>
+<body>
+  <div class="hero min-h-screen bg-base-200">
+    <div class="text-center hero-content">
+      <div class="max-w-md">
+        <h1 class="mb-5 flex justify-center">
+          <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+            <div class="flex flex-col">
+              <span class="font-mono text-5xl countdown">
+                <span id="timeD1" style="--value:0;"></span>
+                <span id="timeD2" style="--value:0;"></span>
+              </span>
+                  days
+                
+            </div> 
+            <div class="flex flex-col">
+              <span class="font-mono text-5xl countdown">
+                <span id="timeH"  style="--value:0;"></span>
+              </span>
+                  hours
+                
+            </div> 
+            <div class="flex flex-col">
+              <span class="font-mono text-5xl countdown">
+                <span id="timeM"  style="--value:0;"></span>
+              </span>
+                  min
+                
+            </div> 
+            <div class="flex flex-col">
+              <span class="font-mono text-5xl countdown">
+                <span id="timeS"  style="--value:0;"></span>
+              </span>
+                  sec
+                
+            </div>
+          </div>
+            </h1> 
+        <p class="mb-5">
+              The days for ours.
+            </p>
+        <!-- <button class="btn btn-primary">Congratulation</button> -->
+        <footer class="p-4 footer text-base-content footer-center">
+          <div>
+            <p>Copyright © 2021 - zzywxq</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 设置一个时间
+    var endTime = new Date('2020/10/31 18:17:00').getTime();
+
+    // 实时更新
+    setInterval(function () {
+      // 获取当前时间
+      var nowTime = new Date().getTime();
+      // 计算时间差
+      var leftTime = nowTime - endTime;
+
+      // 计算天数
+      var d = Math.floor(leftTime / (1000 * 60 * 60 * 24));
+      // 计算小时数
+      var h = Math.floor(leftTime / (1000 * 60 * 60) % 24);
+      // 计算分钟数
+      var m = Math.floor(leftTime / (1000 * 60) % 60);
+      // 计算秒数
+      var s = Math.floor(leftTime / 1000 % 60);
+      // 获得id
+      var timeD = document.getElementById('timeD');
+      var timeH = document.getElementById('timeH');
+      var timeM = document.getElementById('timeM');
+      var timeS = document.getElementById('timeS');
+
+
+      // 设置倒计时
+
+      // 如果大于99就把值分成两个数字
+      if (d > 99) {
+        var d1 = Math.floor(d / 100);
+        var d2 = d % 100;
+        var d2 = d2.toFixed(2);
+        timeD1.style.setProperty('--value', d1);
+        timeD2.style.setProperty('--value', d2);
+      } else {
+        timeD1.style.setProperty('--value', d1);
+      }
+      timeH.style.setProperty('--value', h);
+      timeM.style.setProperty('--value', m);
+      timeS.style.setProperty('--value', s);
+    }, 100);
+
+  </script>
+
+</body>
+</html>
