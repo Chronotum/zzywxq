@@ -98,7 +98,7 @@
   }
 
   .x-color-bg-font {
-    position: relative;
+    /* position: relative; */
   z-index: 10;
   display: flex;
   /* min-height: 100vh; */
