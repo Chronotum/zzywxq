@@ -16,8 +16,14 @@
       transform: scale3d(0.3, 0.3, 0.3);
     }
   
-    100% {
+    80% {
         opacity: .2;
+        -webkit-transform: scale3d(24, 24, 24);
+        transform: scale3d(24, 24, 24);
+    }
+
+    100% {
+        opacity: 0;
         -webkit-transform: scale3d(24, 24, 24);
         transform: scale3d(24, 24, 24);
     }
@@ -30,10 +36,16 @@
       transform: scale3d(0.3, 0.3, 0.3);
     }
   
-    100% {
+    /* 50% {
         opacity: .2;
         -webkit-transform: scale3d(24, 24, 24);
         transform: scale3d(24, 24, 24);
+    } */
+
+    100% {
+        opacity: .2;
+        -webkit-transform: scale3d(48, 48, 48);
+        transform: scale3d(48, 48, 48);
     }
   }
   .animate__frontIn {
@@ -46,15 +58,14 @@
   }
 
   @-webkit-keyframes timerFlash {
-    from,
-    50%,
+    from {
+        opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
     to {
       opacity: 1;
-    }
-  
-    25%,
-    75% {
-      opacity: 0;
     }
   }
   @keyframes timerFlash {
