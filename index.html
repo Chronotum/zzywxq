@@ -1,177 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4W2VH1SVQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-R4W2VH1SVQ');
-  </script>
-   <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@1.16.0/dist/full.css" rel="stylesheet" type="text/css" /> -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" /> -->
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" /> -->
-  <link href="./assets/app.css" rel="stylesheet" type="text/css" />
-  <title>zzywxq</title>
+<head data-theme="dark">
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WE</title>
+  <script type="module" crossorigin src="/assets/index.7b270acf.js"></script>
+  <link rel="modulepreload" href="/assets/vendor.afa29215.js">
+  <link rel="stylesheet" href="/assets/index.b538b5af.css">
 </head>
 
 <body>
-  <div class="hero min-h-screen bg-base-200 overflow-hidden relative select-none">
-    <div class="text-center hero-content z-20">
-      <div class="max-w-md">
-        <h1 class="mb-5 flex justify-center">
-          <div class="flex flex-col items-center">
-            <div
-              class="grid grid-flow-col gap-5 place-items-end auto-cols-max uppercase animate__animated animate__zoomIn">
-              <div class="flex flex-col relative">
-                <span class="font-mono text-7xl transform scale-150 countdown z-10">
-                  <span id="timeD1" style="--value:0;"></span>
-                  <span id="timeD2" style="--value:0;" class="text-gray-500"></span>
-                </span>
-                <!-- <p class="opacity-10 absolute bottom-20 transform scale-900 x-color-bg-font">days</p> -->
-              </div>
-            </div>
-            <div
-              class="grid grid-flow-col gap-5 place-items-end auto-cols-max uppercase absolute bottom-10 animate__animated animate__fadeIn">
-              <div>
-                <span class="font-mono text-4xl countdown">
-                  <span id="timeH" style="--value:0;"></span>
-                </span>
-                <span class="opacity-50">hours</span>
-
-              </div>
-              <div>
-                <span class="font-mono text-4xl countdown">
-                  <span id="timeM" style="--value:0;"></span>
-                </span>
-                <span class="opacity-50">min</span>
-
-              </div>
-              <div>
-                <span class="font-mono text-4xl countdown">
-                  <span id="timeS" style="--value:0;"></span>
-                </span>
-                <span class="opacity-50">sec</span>
-
-              </div>
-            </div>
-          </div>
-
-        </h1>
-        <p class="mb-5 text-xl font-serif  animate__animated animate__fadeInDown animate__delay-1s tracking-wide">
-          The day with us.
-        </p>
-        <!-- <button class="btn btn-primary">Congratulation</button> -->
-        <footer class="absolute inset-x-0 p-4 footer text-base-content footer-center opacity-10 x-color-bg-font">
-          <div>
-            <p>© 2022 zzywxq</p>
-          </div>
-        </footer>
-      </div>
-    </div>
-    <div
-      class="absolute inset-x-0 bottom-0 h-1/2 z-10 transform translate-y-6 filter blur-sm animate__animated animate__timerFlash animate__timer animate__timerDalay animate__infinite">
-      <svg class="absolute bottom-0 w-full h-auto max-h-full opacity-60" style="color: #f43f5e;" width="58" height="27" viewBox="0 0 58 27"
-        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 27L20 0L2 27H0Z" />
-        <path d="M58 27L38 0L56 27H58Z" />
-      </svg>
-    </div>
-    <div class="absolute inset-x-0 bottom-0 h-1/2 opacity-10 transform translate-y-6 filter blur">
-      <svg class="absolute bottom-0 w-full h-auto max-h-full" width="56" height="27" viewBox="0 0 56 27" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path d="M37 0H19L0 27H56L37 0Z" fill="url(#paint0_linear_1558_303)" />
-        <defs>
-          <linearGradient id="paint0_linear_1558_303" x1="28" y1="0" x2="28" y2="27" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#C4C4C4" stop-opacity="0" />
-            <stop offset="0.484375" stop-color="#C4C4C4" />
-            <stop offset="1" stop-color="#C4C4C4" />
-          </linearGradient>
-        </defs>
-      </svg>
-
-    </div>
-
-    <div class="absolute animate__animated animate__frontIn animate__infinite animate__frontInDuration">
-      <svg width="72" height="56" viewBox="0 0 72 56" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M28 55.5C28.8284 55.5 29.5 54.8284 29.5 54C29.5 53.1716 28.8284 52.5 28 52.5V55.5ZM28 3.5C28.8284 3.5 29.5 2.82843 29.5 2C29.5 1.17157 28.8284 0.5 28 0.5V3.5ZM44 52.5C43.1716 52.5 42.5 53.1716 42.5 54C42.5 54.8284 43.1716 55.5 44 55.5V52.5ZM44 0.5C43.1716 0.5 42.5 1.17157 42.5 2C42.5 2.82843 43.1716 3.5 44 3.5V0.5ZM28 52.5C14.469 52.5 3.5 41.531 3.5 28H0.5C0.5 43.1878 12.8122 55.5 28 55.5V52.5ZM3.5 28C3.5 14.469 14.469 3.5 28 3.5V0.5C12.8122 0.5 0.5 12.8122 0.5 28H3.5ZM44 55.5C59.1878 55.5 71.5 43.1878 71.5 28H68.5C68.5 41.531 57.531 52.5 44 52.5V55.5ZM71.5 28C71.5 12.8122 59.1878 0.5 44 0.5V3.5C57.531 3.5 68.5 14.469 68.5 28H71.5Z" />
-      </svg>
-    </div>
-    <div
-      class="absolute animate__animated animate__frontIn animate__infinite animate__delay-1s animate__frontInDuration">
-      <svg width="72" height="56" viewBox="0 0 72 56" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M28 55.5C28.8284 55.5 29.5 54.8284 29.5 54C29.5 53.1716 28.8284 52.5 28 52.5V55.5ZM28 3.5C28.8284 3.5 29.5 2.82843 29.5 2C29.5 1.17157 28.8284 0.5 28 0.5V3.5ZM44 52.5C43.1716 52.5 42.5 53.1716 42.5 54C42.5 54.8284 43.1716 55.5 44 55.5V52.5ZM44 0.5C43.1716 0.5 42.5 1.17157 42.5 2C42.5 2.82843 43.1716 3.5 44 3.5V0.5ZM28 52.5C14.469 52.5 3.5 41.531 3.5 28H0.5C0.5 43.1878 12.8122 55.5 28 55.5V52.5ZM3.5 28C3.5 14.469 14.469 3.5 28 3.5V0.5C12.8122 0.5 0.5 12.8122 0.5 28H3.5ZM44 55.5C59.1878 55.5 71.5 43.1878 71.5 28H68.5C68.5 41.531 57.531 52.5 44 52.5V55.5ZM71.5 28C71.5 12.8122 59.1878 0.5 44 0.5V3.5C57.531 3.5 68.5 14.469 68.5 28H71.5Z" />
-      </svg>
-    </div>
-    <div
-      class="absolute animate__animated animate__frontIn animate__infinite animate__delay-2s animate__frontInDuration">
-      <svg width="72" height="56" viewBox="0 0 72 56" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M28 55.5C28.8284 55.5 29.5 54.8284 29.5 54C29.5 53.1716 28.8284 52.5 28 52.5V55.5ZM28 3.5C28.8284 3.5 29.5 2.82843 29.5 2C29.5 1.17157 28.8284 0.5 28 0.5V3.5ZM44 52.5C43.1716 52.5 42.5 53.1716 42.5 54C42.5 54.8284 43.1716 55.5 44 55.5V52.5ZM44 0.5C43.1716 0.5 42.5 1.17157 42.5 2C42.5 2.82843 43.1716 3.5 44 3.5V0.5ZM28 52.5C14.469 52.5 3.5 41.531 3.5 28H0.5C0.5 43.1878 12.8122 55.5 28 55.5V52.5ZM3.5 28C3.5 14.469 14.469 3.5 28 3.5V0.5C12.8122 0.5 0.5 12.8122 0.5 28H3.5ZM44 55.5C59.1878 55.5 71.5 43.1878 71.5 28H68.5C68.5 41.531 57.531 52.5 44 52.5V55.5ZM71.5 28C71.5 12.8122 59.1878 0.5 44 0.5V3.5C57.531 3.5 68.5 14.469 68.5 28H71.5Z" />
-      </svg>
-    </div>
-    <div
-      class="absolute animate__animated animate__frontIn animate__infinite animate__delay-3s animate__frontInDuration">
-      <svg width="72" height="56" viewBox="0 0 72 56" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M28 55.5C28.8284 55.5 29.5 54.8284 29.5 54C29.5 53.1716 28.8284 52.5 28 52.5V55.5ZM28 3.5C28.8284 3.5 29.5 2.82843 29.5 2C29.5 1.17157 28.8284 0.5 28 0.5V3.5ZM44 52.5C43.1716 52.5 42.5 53.1716 42.5 54C42.5 54.8284 43.1716 55.5 44 55.5V52.5ZM44 0.5C43.1716 0.5 42.5 1.17157 42.5 2C42.5 2.82843 43.1716 3.5 44 3.5V0.5ZM28 52.5C14.469 52.5 3.5 41.531 3.5 28H0.5C0.5 43.1878 12.8122 55.5 28 55.5V52.5ZM3.5 28C3.5 14.469 14.469 3.5 28 3.5V0.5C12.8122 0.5 0.5 12.8122 0.5 28H3.5ZM44 55.5C59.1878 55.5 71.5 43.1878 71.5 28H68.5C68.5 41.531 57.531 52.5 44 52.5V55.5ZM71.5 28C71.5 12.8122 59.1878 0.5 44 0.5V3.5C57.531 3.5 68.5 14.469 68.5 28H71.5Z" />
-      </svg>
-    </div>
-  </div>
-
-  <script>
-    // 设置一个时间
-    var endTime = new Date('2020/10/31 19:46:00').getTime();
-
-    // 实时更新
-    setInterval(function () {
-      // 获取当前时间
-      var nowTime = new Date().getTime();
-      // 计算时间差
-      var leftTime = nowTime - endTime;
-
-      // 计算天数
-      var d = Math.floor(leftTime / (1000 * 60 * 60 * 24));
-      // 计算小时数
-      var h = Math.floor(leftTime / (1000 * 60 * 60) % 24);
-      // 计算分钟数
-      var m = Math.floor(leftTime / (1000 * 60) % 60);
-      // 计算秒数
-      var s = Math.floor(leftTime / 1000 % 60);
-      // 获得id
-      var timeD = document.getElementById('timeD');
-      var timeH = document.getElementById('timeH');
-      var timeM = document.getElementById('timeM');
-      var timeS = document.getElementById('timeS');
-
-
-      // 设置倒计时
-
-      // 如果大于99就把值分成两个数字
-      if (d > 99) {
-        var d1 = Math.floor(d / 100);
-        var d2 = d % 100;
-        var d2 = d2.toFixed(2);
-        timeD1.style.setProperty('--value', d1);
-        timeD2.style.setProperty('--value', d2);
-      } else {
-        timeD1.style.setProperty('--value', d1);
-      }
-      timeH.style.setProperty('--value', h);
-      timeM.style.setProperty('--value', m);
-      timeS.style.setProperty('--value', s);
-    }, 100);
-
-  </script>
-
+  <div id="app"></div>
+  
 </body>
 
 </html>
